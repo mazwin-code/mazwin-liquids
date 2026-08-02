@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mazwin Liquids | Pure, Clean, Refreshing</title>
+<meta name="description" content="Mazwin Liquids — purified water, purified ice and fresh fruit smoothies.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#10243e;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e8eef5;padding:12px 6%;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1px}.brand img{height:44px;width:44px;object-fit:contain}.brand span{color:#159bd7}
+.navlinks{display:flex;gap:24px;font-size:14px;align-items:center}.btn{display:inline-block;background:#159bd7;color:#fff;padding:13px 21px;border-radius:30px;font-weight:700;border:0;cursor:pointer}.btn.alt{background:#10243e}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.hamburger span{width:26px;height:3px;background:#10243e;border-radius:3px}
+.mobilemenu{display:none;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid #e8eef5;padding:0 6%;overflow:hidden;max-height:0;transition:max-height .3s ease}
+.mobilemenu.open{max-height:300px;padding:10px 6% 18px}
+.mobilemenu a{padding:12px 0;border-bottom:1px solid #f0f4f8;font-size:15px}
+.hero{padding:90px 7%;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;background:linear-gradient(135deg,#f4fbff,#fff)}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:800;color:#159bd7}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:15px 0}.hero p{font-size:19px;color:#506176;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.visual{min-height:420px;border-radius:35px;background:linear-gradient(145deg,#dff5ff,#f8fdff);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px #0d5d7a18}.bottle{width:150px;height:320px;border-radius:38px 38px 28px 28px;background:#fff;border:5px solid #b9e8fa;box-shadow:0 18px 35px #0d5d7a22;position:relative}.bottle:before{content:"";position:absolute;width:65px;height:35px;left:38px;top:-35px;border-radius:12px 12px 0 0;background:#159bd7}.label{position:absolute;left:12px;right:12px;top:105px;padding:18px 5px;text-align:center;border-radius:10px;background:#159bd7;color:#fff;font-weight:800}.section{padding:80px 7%}.center{text-align:center}.section h2{font-size:42px;line-height:1.1;margin:10px 0 18px}.muted{color:#64748b}.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}.card{border:1px solid #e5edf4;border-radius:22px;padding:28px;background:#fff;box-shadow:0 12px 35px #16324a0b}.icon{font-size:38px}.card h3{margin:10px 0 5px}.price{font-weight:800;color:#159bd7;margin-top:18px}.info{background:#f5fbfe}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}.feature{padding:22px;border-radius:18px;background:#fff}.contact{background:#10243e;color:#fff}.contact .muted{color:#c9d7e5}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}.contactbox{background:#18334f;padding:28px;border-radius:22px}.contactbox p{margin:10px 0}.footer{padding:30px 7%;background:#0b1b2c;color:#c9d7e5;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
+
+/* Menu section */
+.menutable{margin-top:40px;display:grid;gap:14px}
+.menurow{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;border:1px solid #e5edf4;border-radius:16px;padding:18px 22px;box-shadow:0 8px 24px #16324a08}
+.menurow .desc{color:#64748b;font-size:14px}
+.menurow .prices{display:flex;gap:10px;flex-shrink:0}
+.pill{background:#eaf7fd;color:#159bd7;font-weight:800;border-radius:20px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.menugroup h3{font-size:22px;margin:0 0 6px;color:#10243e}
+.menugroup{margin-bottom:36px}
+
+/* Floating WhatsApp button */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:30;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px #0006;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
+
+@media(max-width:800px){
+.navlinks{display:none}
+.hamburger{display:flex}
+.hero,.about,.contactgrid{grid-template-columns:1fr}.hero{padding-top:40px}.cards,.features{grid-template-columns:1fr}.section{padding:60px 6%}.visual{min-height:320px}.section h2{font-size:34px}
+.menurow{flex-direction:column;align-items:flex-start}
+.wa-float{width:54px;height:54px;bottom:16px;right:16px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+<div class="brand"><img src="logo.png" alt="Mazwin Liquids logo">MAZWIN <span>LIQUIDS</span></div>
+<div class="navlinks"><a href="#about">About</a><a href="#products">Products</a><a href="#menu">Menu</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div>
+<a class="btn" href="https://wa.me/27634666010" style="display:none" id="desktoporder">Order Now</a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobilemenu" id="mobileMenu">
+<a href="#about">About</a><a href="#products">Products</a><a href="#menu">Menu</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+<a href="https://wa.me/27634666010" class="btn" style="margin-top:14px;text-align:center">Order on WhatsApp</a>
+</div>
+
+<header class="hero">
+<div>
+<div class="eyebrow">Pure Quality You Can Trust</div>
+<h1>Hydration that feels effortlessly pure.</h1>
+<p>Mazwin Liquids provides purified water, purified ice and fresh fruit smoothies with one goal: pure, clean, refreshing quality in every drop — delivered to your door.</p>
+<div class="actions"><a class="btn" href="#menu">View Menu</a><a class="btn alt" href="https://wa.me/27634666010">Order on WhatsApp</a></div>
+</div>
+<div class="visual"><div class="bottle"><div class="label">MAZWIN<br>LIQUIDS</div></div></div>
+</header>
+
+<section class="section" id="about">
+<div class="about">
+<div><div class="eyebrow">Who We Are</div><h2>Pure liquids, made simple.</h2><p class="muted">Mazwin Liquids is a purified water, purified ice and fresh smoothie business built around three promises: pure, clean and refreshing — every bottle, every bag, every cup.</p><p>Hygienically prepared products, fresh smoothie options and bulk orders available.</p></div>
+<div class="card"><div class="icon">💧</div><h3>Pure • Clean • Refreshing</h3><p class="muted">Quality products for everyday hydration, events, businesses and families.</p></div>
+</div>
+</section>
+
+<section class="section info" id="products">
+<div class="center"><div class="eyebrow">Featured Products</div><h2>Everything you need to stay refreshed</h2><p class="muted">From single bottles to bulk cases, ice for every event, and smoothies made fresh.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">💧</div><h3>Purified Water</h3><p class="muted">500ml, 1L, 2L and 5L options, plus bulk cases.</p><div class="price">From R12</div></div>
+<div class="card"><div class="icon">🧊</div><h3>Purified Ice</h3><p class="muted">Crystal-clear purified ice for home, events and business.</p><div class="price">From R20</div></div>
+<div class="card"><div class="icon">🥤</div><h3>Fresh Smoothies</h3><p class="muted">Fresh fruit smoothies made for a delicious, refreshing boost.</p><div class="price">From R20</div></div>
+</div>
+</section>
+
+<section class="section" id="menu">
+<div class="center"><div class="eyebrow">Full Menu</div><h2>Fresh blends. Real fruits. Pure goodness.</h2><p class="muted">All prices in Rand. Regular = 350ml, Large = 500ml.</p></div>
+
+<div class="menutable">
+<div class="menugroup">
+<h3>💧 Purified Water</h3>
+<div class="menurow"><div><strong>1 x 500ml</strong></div><div class="prices"><span class="pill">R12</span></div></div>
+<div class="menurow"><div><strong>6 x 500ml</strong><div class="desc">Save R7</div></div><div class="prices"><span class="pill">R65</span></div></div>
+<div class="menurow"><div><strong>12 x 500ml</strong><div class="desc">Save R19</div></div><div class="prices"><span class="pill">R125</span></div></div>
+<div class="menurow"><div><strong>24 x 500ml (1 Case)</strong><div class="desc">Save R48</div></div><div class="prices"><span class="pill">R240</span></div></div>
+</div>
+
+<div class="menugroup">
+<h3>🧊 Purified Ice</h3>
+<div class="menurow"><div><strong>2kg Bag</strong></div><div class="prices"><span class="pill">R20</span></div></div>
+<div class="menurow"><div><strong>5kg Bag</strong></div><div class="prices"><span class="pill">R40</span></div></div>
+</div>
+
+<div class="menugroup">
+<h3>🥤 Smoothies</h3>
+<div class="menurow"><div><strong>Strawberry Bliss</strong><div class="desc">Strawberries, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Mango Magic</strong><div class="desc">Mango, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Berry Burst</strong><div class="desc">Blueberries, strawberries, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Banana Boost</strong><div class="desc">Banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R20 / R30</span></div></div>
+<div class="menurow"><div><strong>Pineapple Refresh</strong><div class="desc">Pineapple, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Green Detox</strong><div class="desc">Spinach, green apple, cucumber, pineapple, lemon</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Peanut Butter Power</strong><div class="desc">Peanut butter, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Chocolate Delight</strong><div class="desc">Banana, cocoa powder, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Mixed Berry Love</strong><div class="desc">Mixed berries, banana, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Citrus Sunrise</strong><div class="desc">Orange, banana, carrot, yoghurt, honey</div></div><div class="prices"><span class="pill">R25 / R35</span></div></div>
+<div class="menurow"><div><strong>Watermelon Wave</strong><div class="desc">Watermelon, strawberry, lime, honey</div></div><div class="prices"><span class="pill">R20 / R30</span></div></div>
+<div class="menurow"><div><strong>Tropical Paradise</strong><div class="desc">Mango, pineapple, banana, yoghurt</div></div><div class="prices"><span class="pill">Ask for pricing</span></div></div>
+</div>
+
+<div class="menugroup">
+<h3>✨ Smoothie Upgrades</h3>
+<div class="menurow"><div><strong>Extra Protein</strong></div><div class="prices"><span class="pill">+R10</span></div></div>
+<div class="menurow"><div><strong>Peanut Butter</strong></div><div class="prices"><span class="pill">+R8</span></div></div>
+<div class="menurow"><div><strong>Chia Seeds</strong></div><div class="prices"><span class="pill">+R5</span></div></div>
+<div class="menurow"><div><strong>Granola</strong></div><div class="prices"><span class="pill">+R8</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="why">
+<div class="center"><div class="eyebrow">Why Choose Us</div><h2>Quality you can taste, trust you can feel</h2></div>
+<div class="features"><div class="feature"><h3>💧 Pure</h3><p class="muted">Purified for clean, refreshing hydration.</p></div><div class="feature"><h3>✨ Clean</h3><p class="muted">Hygienically prepared and packaged.</p></div><div class="feature"><h3>🥤 Refreshing</h3><p class="muted">Great for everyday moments and events.</p></div><div class="feature"><h3>🍓 Fresh</h3><p class="muted">Fresh smoothie options made with real fruit.</p></div></div>
+</section>
+
+<section class="section contact" id="contact">
+<div class="contactgrid">
+<div><div class="eyebrow">Get In Touch</div><h2>Ready to place an order?</h2><p class="muted">Call or WhatsApp us directly to place your order.</p><div class="actions"><a class="btn" href="tel:+27634666010">Call 063 466 6010</a><a class="btn" href="https://wa.me/27634666010">WhatsApp Us</a></div></div>
+<div class="contactbox"><p><strong>📍 Address</strong><br>19 Lang Street, Johannesburg South</p><p><strong>🕐 Business Hours</strong><br>Open 24/7</p><p><strong>📞 Phone / WhatsApp</strong><br>063 466 6010</p></div>
+</div>
+</section>
+
+<footer class="footer"><div><strong>MAZWIN LIQUIDS</strong><br>Pure • Clean • Refreshing</div><div>19 Lang Street, Johannesburg South • Open 24/7</div><div>© 2026 Mazwin Liquids. All rights reserved.</div></footer>
+
+<a class="wa-float" href="https://wa.me/27634666010" aria-label="Chat on WhatsApp" target="_blank">
+<svg viewBox="0 0 32 32" fill="white"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.475L4 29l7.719-1.869A11.94 11.94 0 0016.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.75a9.7 9.7 0 01-4.95-1.358l-.355-.21-3.687.892.902-3.594-.232-.37A9.69 9.69 0 016.25 15c0-5.383 4.368-9.75 9.751-9.75S25.75 9.617 25.75 15 21.384 24.75 16.001 24.75zm5.34-7.29c-.293-.146-1.734-.856-2.003-.954-.269-.098-.465-.146-.66.147-.196.293-.758.954-.929 1.15-.171.196-.342.22-.635.073-.293-.147-1.236-.455-2.354-1.451-.87-.775-1.457-1.733-1.628-2.026-.171-.293-.018-.451.128-.597.132-.131.293-.342.44-.513.146-.171.195-.293.293-.489.098-.196.049-.367-.024-.513-.073-.147-.66-1.591-.904-2.179-.238-.572-.481-.494-.66-.503l-.562-.01c-.196 0-.514.073-.783.367-.269.293-1.026 1.002-1.026 2.444s1.051 2.836 1.198 3.032c.146.196 2.069 3.16 5.014 4.431.7.302 1.246.483 1.672.618.703.224 1.343.192 1.849.117.564-.084 1.734-.709 1.979-1.393.244-.684.244-1.27.171-1.393-.073-.122-.269-.196-.562-.342z"/></svg>
+</a>
+
+<script>
+document.getElementById('hamburgerBtn').addEventListener('click', function(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+document.querySelectorAll('.mobilemenu a').forEach(function(link){
+  link.addEventListener('click', function(){
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
